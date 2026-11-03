@@ -112,3 +112,4 @@ Depois é só abrir no navegador:
 - **`GET /rota?origem=LABTEC&destino=CANTINA&algoritmo=dijkstra`**: calcula a rota entre duas portas com o algoritmo escolhido (`bfs`, `dfs`, `gulosa` ou `dijkstra`).
 - **`GET /comparar?origem=LABTEC&destino=BF`**: roda os 4 algoritmos juntos para o mesmo ponto de saída e chegada, permitindo comparar caminho, custo e visitados de cada um lado a lado.
 "# Buscas_Algoritimos_2026" 
+"# Busca_adi-o_python" 

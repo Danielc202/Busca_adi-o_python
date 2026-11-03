@@ -1,0 +1,67 @@
+COMO RODAR O PROJETO E SUBIR A API
+
+Passo a passo rápido para rodar o projeto no seu computador:
+
+--------------------------------------------------------------------------------
+JEITO MAIS FÁCIL (1 CLIQUE NO WINDOWS)
+--------------------------------------------------------------------------------
+Basta dar dois cliques no arquivo:
+    iniciar_api.bat
+
+Ele já abre a janela do servidor automaticamente. Em seguida, é só abrir 
+o navegador no link indicado abaixo.
+
+--------------------------------------------------------------------------------
+PELO TERMINAL (PASSO A PASSO)
+--------------------------------------------------------------------------------
+
+### ABRA O TERMINAL NA PASTA DO PROJETO
+
+1. Instalar as bibliotecas (caso ainda não tenha instalado):
+Abra o terminal na pasta do projeto e digite:
+
+    python -m pip install -r requirements.txt
+
+2. Testar se o grafo e as buscas estão funcionando no terminal:
+(Opcional, apenas para conferência rápida):
+
+    python grafo.py
+    python buscas.py
+
+3. Subir o servidor da API:
+No terminal, abra a pasta do projeto e digite:
+
+    python -m uvicorn api:app --reload
+
+(Ou apenas "uvicorn api:app --reload". Recomenda-se o primeiro comando,
+pois ele usa a instalação do Python associado ao ambiente atual.)
+
+Vai aparecer uma mensagem avisando que o servidor está rodando em:
+http://127.0.0.1:8000
+
+4. Como testar no navegador:
+Com o servidor ligado, abra o seu navegador e acesse a documentação interativa:
+
+    http://127.0.0.1:8000/docs
+
+Lá você pode clicar em qualquer rota, clicar em "Try it out", digitar as portas 
+e clicar em "Execute" para ver o caminho e o custo em passos na hora.
+
+Links para testar direto no navegador:
+- Todas as portas: http://127.0.0.1:8000/portas
+- Vizinhos de uma porta: http://127.0.0.1:8000/vizinhos/LABTEC
+- Rota com algoritmo: http://127.0.0.1:8000/rota?origem=LABTEC&destino=CANTINA&algoritmo=dijkstra
+- Comparar os 4 algoritmos: http://127.0.0.1:8000/comparar?origem=LABTEC&destino=BF
+
+Se o servidor nao iniciar porque a porta 8000 ja esta em uso, encerre
+o processo anterior ou escolha outra porta. Exemplo:
+
+    python -m uvicorn api:app --reload --port 8010
+
+Nesse caso, substitua 8000 por 8010 nos links abaixo, por exemplo:
+http://127.0.0.1:8010/docs
+
+5. Como encerrar:
+Quando terminar os testes, volte no terminal onde o servidor está rodando 
+e pressione:
+    Ctrl + C

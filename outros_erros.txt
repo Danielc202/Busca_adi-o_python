@@ -1,0 +1,30 @@
+### referencias: https://uvicorn.dev/
+
+caso de erros o bom é Executar:
+
+        python -m pip install -r requirements.txt
+
+        python -m pip install fastapi uvicorn
+
+***Leia as referencias pode ajudar no cumpilado***
+
+        referencias: https://uvicorn.dev/
+
+        https://fastapi.tiangolo.com/deployment/server-workers/#multiple-workers
+
+        https://pypi.org/project/uvicorn/
+
+executar: .py
+
+### existencia de: __pycache__
+
+*** Version: .pyc
+
+#### Bibliotecas utilizadas:
+
+        FastAPI: API HTTP.
+        Uvicorn: servidor da API.
+        collections e heapq:
+        grafo.py e buscas.py:
+
+Boa Sorte ....................................................................
